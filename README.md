@@ -62,6 +62,7 @@ A basic Cyber security homelab where I setup an Active Directory (home lab) that
   
   ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/splunkActivity.png)
 
-  4625 -> Event when logon failed)
+  4625 -> Event when logon failed
+  
   4624 -> Event when logon was successful
 
