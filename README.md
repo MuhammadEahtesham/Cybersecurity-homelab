@@ -1,7 +1,7 @@
 # Cyber Security Homelab
 A basic Cyber security homelab where I setup an Active Directory (home lab) that includes Splunk, Kali Linux & Atomic Red Team. Explore how a domain environment works, learn how to ingest events to a SIEM and generate telemetry related to attacks seen in the wild to help you detect them in the future.
 ## Network Diagram
-![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/diagram.png)
+![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/assets/diagram.png)
 
 ## Step-by-Step Guide
  ### Part 1 📜 : Install virtual machine and ISOs for given links: 
@@ -15,7 +15,7 @@ A basic Cyber security homelab where I setup an Active Directory (home lab) that
 - In VM Network Editor, add NAT network with IP (192.168.10.0/24). Set all the machines to this network.
 - In ubuntu server make this config in /etc/netplan/yaml file for static IP. Also, Sets Google Public DNS (8.8.8.8) to resolve domain names.
 
-  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/yamlConfig.png)
+  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/assets/yamlConfig.png)
 - Install splunk in host OS and share the  folder to the vmware https://www.splunk.com/en_us/products/splunk-enterprise.html
 - In Splunk server, linux command to make the service run everytime the server starts is;
 
@@ -36,7 +36,7 @@ A basic Cyber security homelab where I setup an Active Directory (home lab) that
 - You can check out this repo for detail instruction - https://github.com/MuhammadEahtesham/Active-Directory
 - Promote the server to a domain controller
   
-![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/AD.png)
+![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/assets/AD.png)
 
 - In AD server manage, Tools -> Active Directory users and Computers, added 2 Organization Unit IT & HR and added 2 users in each unit named as Terry and Jenny  
 
@@ -56,11 +56,11 @@ A basic Cyber security homelab where I setup an Active Directory (home lab) that
   ```
   crowbar -b rdp -u tsmith -C passwords.txt -s 192.168.10.100/32 
   ```
-  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/crowbarAttack.png)
+  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/assets/crowbarAttack.png)
 
 - Activity logged in splunk was ;
   
-  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/splunkActivity.png)
+  ![](https://github.com/MuhammadEahtesham/Cybersecurity-homelab/blob/main/assets/splunkActivity.png)
 
   4625 -> Event when logon failed
   
